@@ -615,8 +615,8 @@ class DINOv3ViTForImageClassification(DINOv3ViTPreTrainedModel):
     @auto_docstring
     def forward(
         self,
-        pixel_values: Optional[torch.Tensor] = None,
-        labels: Optional[torch.Tensor] = None,
+        pixel_values: torch.Tensor | None = None,
+        labels: torch.Tensor | None = None,
         **kwargs: Unpack[TransformersKwargs],
     ) -> ImageClassifierOutput:
         r"""

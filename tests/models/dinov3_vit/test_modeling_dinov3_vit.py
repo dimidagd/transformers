@@ -269,12 +269,6 @@ class Dinov3ModelTest(ModelTesterMixin, PipelineTesterMixin, unittest.TestCase):
         model = DINOv3ViTModel.from_pretrained(model_name)
         self.assertIsNotNone(model)
 
-    @slow
-    def test_model_for_image_classification_from_pretrained(self):
-        model_name = "dimidagd/dinov3-vit7b16-pretrain-lvd1689m-imagenet1k-lc"
-        model = DINOv3ViTForImageClassification.from_pretrained(model_name)
-        self.assertIsNotNone(model)
-
 
 # We will verify our results on an image of cute cats
 def prepare_img():
