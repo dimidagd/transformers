@@ -411,6 +411,7 @@ class DINOv3ViTModel(DINOv3ViTPreTrainedModel):
 
         return BaseModelOutputWithPooling(last_hidden_state=sequence_output, pooler_output=pooled_output)
 
+
 @auto_docstring
 class DINOv3ViTBackbone(BackboneMixin, DINOv3ViTPreTrainedModel):
     def __init__(self, config):
